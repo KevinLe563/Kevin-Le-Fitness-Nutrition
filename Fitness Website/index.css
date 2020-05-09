@@ -1,0 +1,121 @@
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+header {
+  border: 2px solid darkgrey;
+  width: 100%;
+  background-color: white;
+  z-index: 10;
+  position: fixed;
+  transition: 0.2s;
+  padding-top: 10px;
+  padding-bottom: 25px;
+}
+
+ul {
+  margin: auto;
+  padding: 0 20px;
+}
+
+li .name {
+  width: 100%;
+  color: black;
+  font-weight: bolder;
+  font-size: 20px;
+  display: inline-block;
+  margin-left: 11%;
+  margin-right: 5.5%;
+}
+
+li {
+  color: black;
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 15px;
+  text-align: center;
+  display: inline-block;
+  margin-left: 5.5%;
+  margin-right: 5.5%;
+}
+
+li a {
+  color: black;
+}
+
+body .quote {
+  font-family: "Times New Roman", Times, serif;
+  padding: 120px 60px 120px 60px;
+  background-color: #222328;
+  background-image: url("fitness_logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  color: lightgray;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 90px;
+}
+
+body .quote strong {
+  font-size: 26px;
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+}
+
+body .intro strong {
+  position: relative;
+  color: white;
+  font-size: 30px;
+}
+
+body .intro {
+  position: relative;
+  color: white;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande";
+  background-color: black;
+  height: 300px;
+  width: 300px;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  float: left;
+  margin-top: 70px;
+  left: 8%;
+  z-index: 2;
+}
+
+body .intro button {
+  margin-top: 20px;
+  width: 100px;
+  height: 40px;
+  background-color: black;
+  border: 2px solid white;
+  font-family: "Courier New", Courier, monospace;
+  transition-duration: 0.5s;
+}
+
+body .intro button a {
+  color: white;
+}
+
+body .intro button:hover {
+  background-color: white;
+  border: 2px solid white;
+}
+
+body .intro button:hover a {
+  color: black;
+}
+
+body img {
+  height: 500px;
+  float: right;
+  position: absolute;
+  right: 8%;
+  z-index: 1;
+  margin-bottom: 90px;
+}
