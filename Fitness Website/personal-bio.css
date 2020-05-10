@@ -1,0 +1,60 @@
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+header {
+  border: 2px solid darkgrey;
+  width: 100%;
+  background-color: white;
+  z-index: 10;
+  position: fixed;
+  transition: 0.2s;
+  padding-top: 10px;
+  padding-bottom: 25px;
+}
+
+ul {
+  margin: auto;
+  padding: 0 20px;
+}
+
+li .name {
+  width: 100%;
+  color: black;
+  font-weight: bolder;
+  font-size: 20px;
+  display: inline-block;
+  margin-left: 11%;
+  margin-right: 5.5%;
+}
+
+li {
+  color: black;
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 15px;
+  text-align: center;
+  display: inline-block;
+  margin-left: 5.5%;
+  margin-right: 5.5%;
+}
+
+li a {
+  color: black;
+}
+
+body .quote {
+  font-family: "Times New Roman", Times, serif;
+  padding: 120px 60px 120px 60px;
+  background-color: #222328;
+  background-image: url("fitness_logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  color: lightgray;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 90px;
+}
