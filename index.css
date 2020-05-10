@@ -5,6 +5,7 @@ body {
 }
 
 body .quote {
+  /* quote on home screen */
   font-family: "Times New Roman", Times, serif;
   padding: 120px 60px 120px 60px;
   background-color: #222328;
