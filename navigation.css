@@ -11,18 +11,9 @@ header {
 }
 
 ul {
+  width: 100%;
   margin: auto;
   padding: 0 20px;
-}
-
-li .name {
-  width: 100%;
-  color: black;
-  font-weight: bolder;
-  font-size: 20px;
-  display: inline-block;
-  margin-left: 14%;
-  margin-right: 7%;
 }
 
 li {
