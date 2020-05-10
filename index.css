@@ -1,0 +1,81 @@
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+body .quote {
+  font-family: "Times New Roman", Times, serif;
+  padding: 120px 60px 120px 60px;
+  background-color: #222328;
+  background-image: url("fitness_logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  color: lightgray;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+body .quote strong {
+  font-size: 26px;
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+}
+
+body .intro strong {
+  position: relative;
+  color: white;
+  font-size: 30px;
+}
+
+body .intro {
+  position: relative;
+  color: white;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande";
+  background-color: black;
+  height: 300px;
+  width: 300px;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  float: left;
+  margin-top: 70px;
+  left: 16%;
+  z-index: 2;
+}
+
+body .intro button {
+  margin-top: 25px;
+  width: 100px;
+  height: 40px;
+  background-color: black;
+  border: 2px solid white;
+  font-family: "Courier New", Courier, monospace;
+  transition-duration: 0.5s;
+}
+
+body .intro button a {
+  color: white;
+}
+
+body .intro button:hover {
+  background-color: white;
+  border: 2px solid white;
+}
+
+body .intro button:hover a {
+  color: black;
+}
+
+body img {
+  /* waterloo pac/slc expansion */
+  height: 500px;
+  float: right;
+  position: absolute;
+  right: 16%;
+  z-index: 1;
+  margin-bottom: 60px;
+}
