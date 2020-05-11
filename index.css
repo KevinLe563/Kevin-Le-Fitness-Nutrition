@@ -4,6 +4,17 @@ body {
   padding: 0px;
 }
 
+body {
+  background-image: linear-gradient(
+    to bottom right,
+    turquoise,
+    lightblue,
+    blue,
+    darkblue,
+    purple
+  );
+}
+
 body .quote {
   /* quote on home screen */
   font-family: "Times New Roman", Times, serif;
@@ -29,22 +40,23 @@ body .quote strong {
 body .intro strong {
   position: relative;
   color: white;
-  font-size: 30px;
+  font-size: 36px;
 }
 
 body .intro {
+  font-size: 24px;
+  display: inline-block;
   position: relative;
   color: white;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande";
   background-color: black;
-  height: 300px;
+  height: 480px;
   width: 300px;
   padding-top: 30px;
   padding-left: 30px;
   padding-right: 30px;
-  float: left;
   margin-top: 70px;
-  left: 16%;
+  left: 15%;
   z-index: 2;
 }
 
@@ -60,6 +72,7 @@ body .intro button {
 
 body .intro button a {
   color: white;
+  margin-bottom: 80px;
 }
 
 body .intro button:hover {
@@ -73,10 +86,74 @@ body .intro button:hover a {
 
 body img {
   /* waterloo pac/slc expansion */
+  display: inline-block;
   height: 500px;
-  float: right;
-  position: absolute;
-  right: 16%;
+  margin-right: 16%;
   z-index: 1;
-  margin-bottom: 60px;
+  position: absolute;
+  left: 35%;
+}
+
+body .workout strong {
+  text-align: center;
+  color: lightblue;
+  font-size: 36px;
+}
+
+body .workout {
+  font-size: 24px;
+  text-align: center;
+  background-image: linear-gradient(darkblue, turquoise);
+  position: relative;
+  color: white;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande";
+  height: 275px;
+  width: 100%;
+  padding-top: 30px;
+  z-index: 2;
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+body .workout button {
+  position: relative;
+  font-family: "Courier New", Courier, monospace;
+  padding: 20px 30px 20px 30px;
+  color: black;
+  background-color: white;
+  left: 0px;
+  bottom: -12.5%;
+  border-radius: 12px;
+  border: 2px solid darkslateblue;
+  transition: all 0.5s;
+  font-size: 24px;
+}
+
+body .workout a {
+  text-decoration: none;
+}
+
+body .workout button:after {
+  content: "»";
+  position: absolute;
+  opacity: 0;
+  top: 20px;
+  right: -30px;
+  transition: 0.5s;
+}
+
+body .workout button:hover {
+  padding-left: 15px;
+  padding-right: 45px;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.7);
+  border: none;
+}
+
+body .workout a:hover {
+  text-decoration: underline;
+}
+
+body .workout button:hover:after {
+  opacity: 1;
+  right: 20px;
 }
