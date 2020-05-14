@@ -1,9 +1,3 @@
-html,
-body {
-  margin: 0px;
-  padding: 0px;
-}
-
 body .quote {
   /* quote on home screen */
   font-family: "Times New Roman", Times, serif;
@@ -93,7 +87,7 @@ body .workout strong {
 body .workout {
   font-size: 24px;
   text-align: center;
-  background-image: linear-gradient(darkblue, turquoise);
+  background-image: linear-gradient(black, white);
   position: relative;
   color: white;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande";
