@@ -1,19 +1,56 @@
+body {
+  background-color: linear-gradient(grey, turquoise);
+}
+
 body h1 {
   margin-top: 0px;
   text-align: center;
   font-size: 36px;
   color: darkblue;
   font-family: "Courier New", Courier, monospace;
-  padding: 70px 60px 20px 60px;
+  padding: 70px 60px 0px 60px;
 }
 
 body h2 {
-  text-align: left;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
   color: darkblue;
-  margin-left: 50px;
 }
 
 table {
-  color: black;
+  margin-top: 25px;
+  width: 75%;
+  margin-left: 12.5%;
+  margin-right: 12.5%;
+  margin-bottom: 25px;
+  background-image: url("dumbell.png");
+  background-color: #222328;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+table tr {
+  column-width: 100px;
+}
+
+table,
+th,
+td {
+  color: #33ccff;
+  text-align: center;
+  border: 1px solid White;
+}
+
+.col1 {
+  width: 25%;
+}
+
+th {
+  width: 25%;
+}
+
+table tr th {
   text-align: center;
 }
