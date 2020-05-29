@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kevin Le | Fitness | Nutrition</title>
+    <link href="navigation.css" rel="stylesheet" type="text/css" />
+    <link href="personal-fitness-plan.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="navigation.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="personal-fitness-plan.js"></script>
+  </head>
+  <header id="navigation">
+    <ul>
+      <li><a href="index.html">KEVIN LE</a></li>
+      <li>
+        <a href="index.html">HOME</a>
+      </li>
+      <li>
+        <a href="about.html">ABOUT</a>
+      </li>
+      <li>
+        <a href="workout.html">WORKOUT</a>
+      </li>
+      <li>
+        <a href="diet-&-nutrition.html">DIET & NUTRITION</a>
+      </li>
+    </ul>
+  </header>
+  <body>
+    <table>
+      <tr>
+        <th>Shoulders</th>
+        <th>Chest</th>
+        <th>Back</th>
+        <th>Legs</th>
+        <th>Arms</th>
+      </tr>
+      <tr>
+        <td>
+          <input
+            type="checkbox"
+            id="barbell-shoulder-press"
+            name="barbell-shoulder-press"
+          />
+          <label for="barbell-shoulder-press">Barbell Shoulder Press</label>
+          <div class="volume" id="v-barbell-shoulder-press">
+            Sets:<input
+              type="number"
+              min="1"
+              step="1"
+              oninput="validity.valid||(value='');"
+            />
+            <br />
+            Reps:<input
+              type="number"
+              min="1"
+              step="1"
+              oninput="validity.valid||(value='');"
+            />
+          </div>
+        </td>
+        <td>
+          <input type="checkbox" id="bench-press" name="bench-press" />
+          <label for="bench-press">Bench Press</label>
+          <div class="volume" id="v-bench-press">
+            Sets:<input type="number" min="1" step="1"
+            oninput="validity.valid||(value='');" width: 30px; />
+            <br />
+            Reps:<input
+              type="number"
+              min="1"
+              step="1"
+              oninput="validity.valid||(value='');"
+            />
+          </div>
+        </td>
+        <td><input type="checkbox" id="rows" name="rows" />
+            <label for="rows">Rows</label>
+            <div class="volume" id="v-rows">
+              Sets:<input type="number" min="1" step="1"
+              oninput="validity.valid||(value='');" width: 30px; />
+              <br />
+              Reps:<input
+                type="number"
+                min="1"
+                step="1"
+                oninput="validity.valid||(value='');"
+              />
+            </div></td>
+        <td><input type="checkbox" id="deadlift" name="deadlift" />
+            <label for="deadlift">Deadlift</label>
+            <div class="volume" id="v-deadlift">
+              Sets:<input type="number" min="1" step="1"
+              oninput="validity.valid||(value='');" width: 30px; />
+              <br />
+              Reps:<input
+                type="number"
+                min="1"
+                step="1"
+                oninput="validity.valid||(value='');"
+              /></td>
+        <td><input type="checkbox" id="barbell-curl" name="barbell-curl" />
+            <label for="barbell-curl">Barbell Curl</label>
+            <div class="volume" id="v-barbell-curl">
+              Sets:<input type="number" min="1" step="1"
+              oninput="validity.valid||(value='');" width: 30px; />
+              <br />
+              Reps:<input
+                type="number"
+                min="1"
+                step="1"
+                oninput="validity.valid||(value='');"
+              /></td>
+      </tr>
+      <tr>
+        
+      </tr>
+    </table>
+  </body>
+</html>

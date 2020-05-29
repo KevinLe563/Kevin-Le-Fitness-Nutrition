@@ -1,0 +1,22 @@
+body table {
+  width: 100%;
+  padding-top: 70px;
+  margin-top: 0;
+}
+
+body table th {
+  text-align: left;
+}
+
+body table td {
+  width: 20%;
+  vertical-align: top;
+}
+
+body #v-barbell-shoulder-press,
+#v-bench-press,
+#v-rows,
+#v-deadlift,
+#v-barbell-curl {
+  visibility: hidden;
+}
