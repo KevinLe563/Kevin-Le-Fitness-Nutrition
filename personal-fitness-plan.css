@@ -13,10 +13,6 @@ body table td {
   vertical-align: top;
 }
 
-body #v-barbell-shoulder-press,
-#v-bench-press,
-#v-rows,
-#v-deadlift,
-#v-barbell-curl {
+body table .volume {
   visibility: hidden;
 }

@@ -40,11 +40,11 @@
         <td>
           <input
             type="checkbox"
-            id="barbell-shoulder-press"
+            class="exercise"
             name="barbell-shoulder-press"
           />
           <label for="barbell-shoulder-press">Barbell Shoulder Press</label>
-          <div class="volume" id="v-barbell-shoulder-press">
+          <div class="volume">
             Sets:<input
               type="number"
               min="1"
@@ -61,9 +61,9 @@
           </div>
         </td>
         <td>
-          <input type="checkbox" id="bench-press" name="bench-press" />
+          <input type="checkbox" class="exercise" name="bench-press" />
           <label for="bench-press">Bench Press</label>
-          <div class="volume" id="v-bench-press">
+          <div class="volume">
             Sets:<input type="number" min="1" step="1"
             oninput="validity.valid||(value='');" width: 30px; />
             <br />
@@ -75,9 +75,11 @@
             />
           </div>
         </td>
-        <td><input type="checkbox" id="rows" name="rows" />
+        <td>
+          <div>
+            <input type="checkbox" class="exercise" name="rows" />
             <label for="rows">Rows</label>
-            <div class="volume" id="v-rows">
+            <div class="volume">
               Sets:<input type="number" min="1" step="1"
               oninput="validity.valid||(value='');" width: 30px; />
               <br />
@@ -87,10 +89,12 @@
                 step="1"
                 oninput="validity.valid||(value='');"
               />
-            </div></td>
-        <td><input type="checkbox" id="deadlift" name="deadlift" />
+            </div>
+          </div>
+        </td>
+        <td><input type="checkbox" class="exercise" name="deadlift" />
             <label for="deadlift">Deadlift</label>
-            <div class="volume" id="v-deadlift">
+            <div class="volume">
               Sets:<input type="number" min="1" step="1"
               oninput="validity.valid||(value='');" width: 30px; />
               <br />
@@ -100,9 +104,9 @@
                 step="1"
                 oninput="validity.valid||(value='');"
               /></td>
-        <td><input type="checkbox" id="barbell-curl" name="barbell-curl" />
+        <td><input type="checkbox" class="exercise" name="barbell-curl" />
             <label for="barbell-curl">Barbell Curl</label>
-            <div class="volume" id="v-barbell-curl">
+            <div class="volume">
               Sets:<input type="number" min="1" step="1"
               oninput="validity.valid||(value='');" width: 30px; />
               <br />
