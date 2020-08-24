@@ -36,7 +36,7 @@ li {
 li a {
   color: black;
   text-decoration: none;
-  background-image: linear-gradient(currentColor, currentColor);
+  background-image: linear-gradient(darkblue, darkblue);
   background-position: 0% 100%;
   background-repeat: no-repeat;
   background-size: 0% 2px;

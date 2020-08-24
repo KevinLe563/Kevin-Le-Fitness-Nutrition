@@ -8,6 +8,7 @@
     <link href="navigation.css" rel="stylesheet" type="text/css" />
     <link href="workout.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="navigation.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="workout.js"></script>
   </head>
   <header id="navigation">
@@ -33,156 +34,320 @@
       <br />
       ↓
     </h1>
-    <div class="split">
-      <h2>
-        Split/Day 1:
-      </h2>
+    <h2>My current workout: PPL</h2>
+    <div class="workout">
+      <button
+        class="tablinks"
+        onclick="openSplit(event, 'monday')"
+        id="defaultOpen"
+      >
+        Monday
+      </button>
+      <button class="tablinks" onclick="openSplit(event, 'tuesday')">
+        Tuesday
+      </button>
+      <button class="tablinks" onclick="openSplit(event, 'wednesday')">
+        Wednesday
+      </button>
+      <button class="tablinks" onclick="openSplit(event, 'thursday')">
+        Thursday
+      </button>
+      <button class="tablinks" onclick="openSplit(event, 'friday')">
+        Friday
+      </button>
+      <button class="tablinks" onclick="openSplit(event, 'saturday')">
+        Saturday
+      </button>
+      <button class="tablinks" onclick="openSplit(event, 'sunday')">
+        Sunday
+      </button>
+    </div>
+
+    <!-- tab content for splits -->
+
+    <div id="monday" class="tabcontent">
+      <h3>PUSH</h3>
       <table>
         <tr>
-          <col span="1" class="col1" />
-          <th>
-            Focus
-          </th>
-          <th>
-            Exercise
-          </th>
-          <th>
-            Sets
-          </th>
+          <th>Exercise</th>
+          <th>Focus</th>
+          <th>Warmup Sets/Reps</th>
+          <th>Working Sets/Reps</th>
         </tr>
         <tr>
-          <td>
-            Chest
-          </td>
-          <td>
-            Bench Press + Inclined Bench Press + Inclined Dumbell Press
-          </td>
-          <td>
-            Bench Press: 2 Warmup, 2-3 Hard Sets, 1 Light Set
-            <br />
-            Inclined Bench Press: 1 Warmup, 2 Hard Sets, 1 Light Set
-            <br />
-            Inclined Dumbell Press: 3 Hard Sets
-          </td>
+          <td>Bench Press</td>
+          <td>Chest</td>
+          <td>7 Reps/3 Sets</td>
+          <td>5-7 Reps/3 Sets</td>
         </tr>
         <tr>
-          <td>
-            Shoulder
-          </td>
-          <td>
-            Barbell Shoulder Press + Dumbell Shoulder Press
-          </td>
-          <td>
-            Barbell Shoulder Press: 2-3 Hard Sets, 1 Light Set
-            <br />
-            Dumbell Shoulder Press: 3 Hard Sets
-          </td>
+          <td>Inclined Bench Press</td>
+          <td>Chest</td>
+          <td>8 Reps/1 Set</td>
+          <td>5-8 Reps/3 Sets</td>
         </tr>
         <tr>
-          <td>
-            Legs
-          </td>
-          <td>
-            Deadlifts + Calves
-          </td>
-          <td>
-            2 Warmup, 3 Hard Sets, 1 Light Set
-          </td>
+          <td>Overhead Shoulder Press</td>
+          <td>Shoulders</td>
+          <td>3-5 Reps/2 Sets</td>
+          <td>5-8 Reps/3 Sets</td>
         </tr>
         <tr>
-          <td>
-            Isolation (Chest and Shoulders)
-          </td>
-          <td>
-            Chest Fly's + Cable Front/Side Laterals
-          </td>
-          <td>
-            Chest Fly's: 6 Hard Sets
-            <br />
-            Cable Front Laterals: 3 Hard Sets
-            <br />
-            Cable Side Laterals: 3 Hard Sets
-          </td>
-        </tr>
-      </table>
-      <h2>
-        Split/Day 2:
-      </h2>
-      <table>
-        <tr>
-          <col span="1" class="col1" />
-          <th>
-            Focus
-          </th>
-          <th>
-            Exercise
-          </th>
-          <th>
-            Sets
-          </th>
+          <td>Dumbell Inclined Press Superset Arnold Press</td>
+          <td>Chest + Shoulder</td>
+          <td>0 Reps/0 Sets</td>
+          <td>8-10 Reps/4 Sets (2 Each)</td>
         </tr>
         <tr>
-          <td>
-            Legs
-          </td>
-          <td>
-            Squat + Hamstring Curls
-          </td>
-          <td>
-            Squat: 2 Warmup, 3-4 Hard Sets, 1 Light Set
-            <br />
-            Hamstring: 2-3 Hard Sets, 2 Light Sets
-          </td>
+          <td>SkullCrushers Superset Tricep Pushup</td>
+          <td>Triceps</td>
+          <td>0 Reps/0 Sets</td>
+          <td>8-12 Reps/6 Sets (3 Each)</td>
         </tr>
         <tr>
-          <td>
-            Laterals + Back
-          </td>
-          <td>
-            Supinated Grip/Pronated Grip Lat Pulldowns + Lat Pushdown + Rows
-          </td>
-          <td>
-            Lat Pulldowns: 3-4 Hard Sets, 1 Light Set
-            <br />
-            Lat Pushdown: 3 Hard Sets
-            <br />
-            Rows: 1 Warmup, 3 Hard Sets
-          </td>
-        </tr>
-        <tr>
-          <td>
-            Triceps
-          </td>
-          <td>
-            Skull Crushers + Tricep Pulldown (Bar + Cable)
-          </td>
-          <td>
-            Skull Crushers: 4 Hard Sets
-            <br />
-            Tricep Pulldown: 3 Hard Sets Each
-          </td>
-        </tr>
-        <tr>
-          <td>
-            Biceps
-          </td>
-          <td>
-            Barbell Curl + Dumbell Curl + Hammer Curls
-          </td>
-          <td>
-            Barbell Curl: 4 Hard Sets
-            <br />
-            Dumbell/Hammer Curl: 3 Hard Sets Each
-          </td>
+          <td>Tricep Pushdown Superset Side Lateral Raise</td>
+          <td>Triceps + Delts</td>
+          <td>0 Reps/0 Sets</td>
+          <td>8-12 Reps/6 Sets (3 Each)</td>
         </tr>
       </table>
     </div>
-    <div class="workout">
-      <button>
-        <a href="personal-fitness-plan.html">
-          Create Your Personal Workout Routine
-        </a>
-      </button>
+
+    <div id="tuesday" class="tabcontent">
+      <h3>PULL</h3>
+      <table>
+        <tr>
+          <th>Exercise</th>
+          <th>Focus</th>
+          <th>Warmup Sets/Reps</th>
+          <th>Working Sets/Reps</th>
+        </tr>
+        <tr>
+          <td>Deadlift</td>
+          <td>Legs + Back</td>
+          <td>4-5 Reps/4 Sets</td>
+          <td>5-8 Reps/3 Sets</td>
+        </tr>
+        <tr>
+          <td>Rows</td>
+          <td>Back</td>
+          <td>8 Reps/1 Set</td>
+          <td>8-12 Reps/4 Sets</td>
+        </tr>
+        <tr>
+          <td>Lateral Pulldown</td>
+          <td>Laterals</td>
+          <td>6-8 Reps/1 Set</td>
+          <td>8-16 Reps/3 Sets</td>
+        </tr>
+        <tr>
+          <td>Reverse Fly's</td>
+          <td>Rear Delts</td>
+          <td>0 Reps/0 Sets</td>
+          <td>10-12 Reps/3 Sets</td>
+        </tr>
+        <tr>
+          <td>Barbell Curl Superset Shrugs</td>
+          <td>Biceps + Traps</td>
+          <td>0 Reps/0 Sets</td>
+          <td>8-12 Reps/6 Sets (3 Each)</td>
+        </tr>
+        <tr>
+          <td>Seated Incline Dumbell Curl</td>
+          <td>Bicep</td>
+          <td>0 Reps/0 Sets</td>
+          <td>8-12 Reps/3 Sets</td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="wednesday" class="tabcontent">
+      <h3>LEGS</h3>
+      <table>
+        <tr>
+          <th>Exercise</th>
+          <th>Focus</th>
+          <th>Warmup Sets/Reps</th>
+          <th>Working Sets/Reps</th>
+        </tr>
+        <tr>
+          <td>Squat</td>
+          <td>Legs</td>
+          <td>7-8 Reps/4 Sets</td>
+          <td>5-8 Reps/4 Sets</td>
+        </tr>
+        <tr>
+          <td>Leg Press</td>
+          <td>Quads</td>
+          <td>0 Reps/10 Set</td>
+          <td>8-12 Reps/4 Sets</td>
+        </tr>
+        <tr>
+          <td>Hamstring Curl</td>
+          <td>Hamstrings</td>
+          <td>6-8 Reps/1 Set</td>
+          <td>8-12 Reps/3 Sets</td>
+        </tr>
+        <tr>
+          <td>Calf Raises</td>
+          <td>Calves</td>
+          <td>8-12 Reps/1 Sets</td>
+          <td>10-12 Reps/4 Sets</td>
+        </tr>
+        <tr>
+          <td>Abductor Machine</td>
+          <td>Abductors</td>
+          <td>0 Reps/0 Sets</td>
+          <td>12-16 Reps/3 Sets</td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="thursday" class="tabcontent">
+      <h3>PUSH</h3>
+      <table>
+        <tr>
+          <th>Exercise</th>
+          <th>Focus</th>
+          <th>Warmup Sets/Reps</th>
+          <th>Working Sets/Reps</th>
+        </tr>
+        <tr>
+          <td>Bench Press</td>
+          <td>Chest</td>
+          <td>7 Reps/3 Sets</td>
+          <td>5-7 Reps/3 Sets</td>
+        </tr>
+        <tr>
+          <td>Inclined Bench Press</td>
+          <td>Chest</td>
+          <td>8 Reps/1 Set</td>
+          <td>5-8 Reps/3 Sets</td>
+        </tr>
+        <tr>
+          <td>Overhead Shoulder Press</td>
+          <td>Shoulders</td>
+          <td>3-5 Reps/2 Sets</td>
+          <td>5-8 Reps/3 Sets</td>
+        </tr>
+        <tr>
+          <td>Dumbell Inclined Press Superset Arnold Press</td>
+          <td>Chest + Shoulder</td>
+          <td>0 Reps/0 Sets</td>
+          <td>8-10 Reps/4 Sets (2 Each)</td>
+        </tr>
+        <tr>
+          <td>SkullCrushers Superset Tricep Pushup</td>
+          <td>Triceps</td>
+          <td>0 Reps/0 Sets</td>
+          <td>8-12 Reps/6 Sets (3 Each)</td>
+        </tr>
+        <tr>
+          <td>Tricep Pushdown Superset Side Lateral Raise</td>
+          <td>Triceps + Delts</td>
+          <td>0 Reps/0 Sets</td>
+          <td>8-12 Reps/6 Sets (3 Each)</td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="friday" class="tabcontent">
+      <h3>PULL</h3>
+      <table>
+        <tr>
+          <th>Exercise</th>
+          <th>Focus</th>
+          <th>Warmup Sets/Reps</th>
+          <th>Working Sets/Reps</th>
+        </tr>
+        <tr>
+          <td>Deadlift</td>
+          <td>Legs + Back</td>
+          <td>4-5 Reps/4 Sets</td>
+          <td>5-8 Reps/3 Sets</td>
+        </tr>
+        <tr>
+          <td>Rows</td>
+          <td>Back</td>
+          <td>8 Reps/1 Set</td>
+          <td>8-12 Reps/4 Sets</td>
+        </tr>
+        <tr>
+          <td>Lateral Pulldown</td>
+          <td>Laterals</td>
+          <td>6-8 Reps/1 Set</td>
+          <td>8-16 Reps/3 Sets</td>
+        </tr>
+        <tr>
+          <td>Reverse Fly's</td>
+          <td>Rear Delts</td>
+          <td>0 Reps/0 Sets</td>
+          <td>10-12 Reps/3 Sets</td>
+        </tr>
+        <tr>
+          <td>Barbell Curl Superset Shrugs</td>
+          <td>Biceps + Traps</td>
+          <td>0 Reps/0 Sets</td>
+          <td>8-12 Reps/6 Sets (3 Each)</td>
+        </tr>
+        <tr>
+          <td>Seated Incline Dumbell Curl</td>
+          <td>Bicep</td>
+          <td>0 Reps/0 Sets</td>
+          <td>8-12 Reps/3 Sets</td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="saturday" class="tabcontent">
+      <h3>LEGS</h3>
+      <table>
+        <tr>
+          <th>Exercise</th>
+          <th>Focus</th>
+          <th>Warmup Sets/Reps</th>
+          <th>Working Sets/Reps</th>
+        </tr>
+        <tr>
+          <td>Squat</td>
+          <td>Legs</td>
+          <td>7-8 Reps/4 Sets</td>
+          <td>5-8 Reps/4 Sets</td>
+        </tr>
+        <tr>
+          <td>Leg Press</td>
+          <td>Quads</td>
+          <td>0 Reps/10 Set</td>
+          <td>8-12 Reps/4 Sets</td>
+        </tr>
+        <tr>
+          <td>Hamstring Curl</td>
+          <td>Hamstrings</td>
+          <td>6-8 Reps/1 Set</td>
+          <td>8-12 Reps/3 Sets</td>
+        </tr>
+        <tr>
+          <td>Calf Raises</td>
+          <td>Calves</td>
+          <td>8-12 Reps/1 Sets</td>
+          <td>10-12 Reps/4 Sets</td>
+        </tr>
+        <tr>
+          <td>Abductor Machine</td>
+          <td>Abductors</td>
+          <td>0 Reps/0 Sets</td>
+          <td>12-16 Reps/3 Sets</td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="sunday" class="tabcontent">
+      <h3>REST</h3>
+      <br />
+      <p>
+        Rest day. Time spent recovering from the week and spent doing other
+        physical activity (usually cardio)
+      </p>
     </div>
   </body>
 </html>
